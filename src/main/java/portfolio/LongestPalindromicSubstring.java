@@ -24,17 +24,23 @@ public class LongestPalindromicSubstring {
         int start = 0; // Start index of the longest palindrome found so far.
         int end = 0; // end index of the longest palindrome found so far.
 
+        // Loop through each character to find potential palindromes by treating it as a center.
         for (int i = 0; i < s.length(); i++){
-
+            // Expand around single character (odd-length palindromes).
             int len1 = expandCenter(s, i, i);
+            // Expand around two consecutive characters (even-length palindromes).
             int len2 = expandCenter(s, i, i + 1);
+            // Take the maximum length between odd and even-length palindromes.
             int len = Math.max(len1, len2);
 
+            // Update the start and end indices if a longer palindrome is found.
             if (len > end - start){
                 start = i - (len - 1) / 2;
                 end = i + len / 2;
             }
         }
+
+        // Return the longest palindromic substring.
         return s.substring(start, end + 1);
     }
 
