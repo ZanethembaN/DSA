@@ -1,13 +1,28 @@
 package portfolio;
 
+
+/**
+ * This class provides a solution to the problem of finding the longest palindromic substring
+ * in a given string. The approach uses a center expansion technique for efficient computation.
+ */
 public class LongestPalindromicSubstring {
 
+    /**
+     * Finds the longest palindromic substring in the given string using the center expansion method.
+     *
+     * The method checks every character in the string as a potential center for palindromes.
+     * It considers both odd-length and even-length palindromes by expanding around the current index
+     * and returning the longest substring.
+     *
+     * @param s The input string to search for the longest palindromic substring.
+     * @return The longest palindromic substring found in the input string.
+     */
     public String longSubStr(String s){
 
-        if (s == null) return "";
+        if (s == null) return ""; // Return empty string if input is null.
 
-        int start = 0;
-        int end = 0;
+        int start = 0; // Start index of the longest palindrome found so far.
+        int end = 0; // end index of the longest palindrome found so far.
 
         for (int i = 0; i < s.length(); i++){
 
