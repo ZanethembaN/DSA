@@ -1,23 +1,22 @@
 package portfolio;
 
+/**
+ * This class provides a solution for the "Best Time to Buy and Sell Stock" problem.
+ * It calculates the maximum profit that can be achieved by making a single buy and
+ * sell transaction given the stock prices over time.
+ */
 public class BestTimeToBuyAndSellStock {
 
     /**
-     * This class provides a solution for the "Best Time to Buy and Sell Stock" problem.
-     * It calculates the maximum profit that can be achieved by making a single buy and
-     * sell transaction given the stock prices over time.
+     * Finds the maximum profit that can be achieved from buying and selling the stock
+     * at the most optimal time.
+     *
+     * @param prices An array of integers representing stock prices over time.
+     *               Each element represents the price of the stock on a specific day.
+     * @return The maximum profit that can be achieved by buying and then selling the stock.
+     *         Returns 0 if no profit can be made.
      */
     public int maxProfit(int[] prices){
-
-        /**
-         * Finds the maximum profit that can be achieved from buying and selling the stock
-         * at the most optimal time.
-         *
-         * @param prices An array of integers representing stock prices over time.
-         *               Each element represents the price of the stock on a specific day.
-         * @return The maximum profit that can be achieved by buying and then selling the stock.
-         *         Returns 0 if no profit can be made.
-         */
 
         int minPrice = Integer.MAX_VALUE;
         int maxProfit = 0;
