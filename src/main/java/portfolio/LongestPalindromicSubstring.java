@@ -44,12 +44,25 @@ public class LongestPalindromicSubstring {
         return s.substring(start, end + 1);
     }
 
-    public int expandCenter(String s, int left, int right){
 
+    /**
+     * Expands around the given center to find the length of the palindrome.
+     *
+     * This method checks if the substring between the left and right pointers is a palindrome by
+     * expanding outwards while the characters match.
+     *
+     * @param s The string to search for palindromes.
+     * @param left The left index to start the expansion.
+     * @param right The right index to start the expansion.
+     * @return The length of the palindrome found by expanding from the center.
+     */
+    public int expandCenter(String s, int left, int right){
+        // Expand as long as the substring is a palindrome.
         while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)){
             left --;
             right ++;
         }
+        // Return the length of the palindrome found.
         return right - left - 1;
     }
 }
