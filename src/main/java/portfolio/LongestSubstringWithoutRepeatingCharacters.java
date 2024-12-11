@@ -8,6 +8,12 @@ public class LongestSubstringWithoutRepeatingCharacters {
 
     public int lengthOfLongestSub(String s){
 
+        /**
+         * Finds the length of the longest substring without repeating characters.
+         *
+         * @param s the input string
+         * @return the length of the longest substring without duplicates
+         */
         Set<Character> characterSet = new HashSet<>();
 
         int left = 0;
